@@ -1,4 +1,4 @@
-package com.example.pokemons
+package com.example.mypokemons
 
 import org.junit.Test
 
