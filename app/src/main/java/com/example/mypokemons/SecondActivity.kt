@@ -1,48 +1,48 @@
 package com.example.mypokemons
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import android.util.Log
 
-class MainActivity : AppCompatActivity() {
+class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_second)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        Log.d("Main Activity", "Hi onCreate")
+        Log.d("Second Activity", "Hi onCreate")
     }
 
     override fun onStart() {
         super.onStart()
-        Log.d("Main Activity", "Hi onStart")
+        Log.d("Second Activity", "Hi onStart")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.d("Main Activity", "Hi onResume")
+        Log.d("Second Activity", "Hi onResume")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.d("Main Activity", "Hi onPause")
+        Log.d("Second Activity", "Hi onPause")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.d("Main Activity", "Hi onStop")
+        Log.d("Second Activity", "Hi onStop")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d("Main Activity", "Hi onDestroy")
+        Log.d("Second Activity", "Hi onDestroy")
     }
 }
